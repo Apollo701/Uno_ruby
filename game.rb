@@ -1,12 +1,10 @@
 class Game
-	attr_accessor :num_of_players, :num_of_rounds, :winner
-	def initialize
-		puts greeting
+	attr_reader :number_of_players, :number_of_rounds, :winner
+	def initialize()
 		#Round.new(greeting)
-		
 	end
 
-	def greeting
+	def self.number_of_players
 		puts '' * 4
 		puts "\t"*2 + '*'*80
 		puts "\t"*2 + '*'*80
@@ -17,10 +15,8 @@ class Game
 		puts "\t"*2 + 'The game will have 5 people at all times consisting of players and computers.'
 		puts 
 		print "\t"*2 + 'How many people will be playing? '
-		num_of_players = gets.chomp.strip
+		gets.chomp.strip
 	end
 
 
 end
-
-Game.new
